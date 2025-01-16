@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;800&display=swap");
+:root{
+    --primary: #f94e4e;
+    --secondary: #181820;
+}
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  ul, ol{
+    padding-left: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    font-family: "Commissioner", sans-serif;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+
+
+/* navbar */
+.header{
+    position: relative;
+}
+.header_nav{
+    display: grid;
+    grid-template-columns: minmax(80px, 1fr) minmax(100px, 420px) minmax(100px, 680px)  minmax(80px, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+
+
+    figure{
+        grid-column: 2 / 3;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        background-color: var(--primary);
+        grid-column: 3 / -1;
+        padding-left: 3rem;
+        padding-block: 3.5rem;
+    }
+}
+
+.header_nav ul li:not(:last-of-type) a{
+    color: white;
+    text-decoration: none;
+    transition: 300ms ease-in-out;
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary);
+        bottom: -5px;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform 300ms ease-in-out;
+    }
+}
+
+.header_nav ul li:not(:last-of-type) a:hover{
+    color: var(--secondary);
+}
+.header_nav ul li:not(:last-of-type) a:hover::after{
+    transform: scale(1);
+}
+.btn_secondary{
+    background-color: var(--secondary);
+    color: white;
+    padding: 1.4375rem 2.75rem;
+    text-decoration: none;
+    border: 2px solid var(--secondary);
+    transition: 300ms ease-in-out;
+    font-weight: 800;
+}
+.btn_secondary:hover{
+    background-color: #fff;
+    color: var(--secondary);
+}
+
+.mobile{
+    display: none;
+    transition: 300ms ease-in-out;
+        figure{
+            padding-right: 20px;
+            cursor: pointer;
+        }
+        .mobile_menu{
+            display: grid;
+            position: absolute;
+            background-color: #f94e4e;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 70px;
+            align-items: center;
+            transition: 300ms ease-in-out;
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+            &.active{
+                pointer-events: all;
+                opacity: 1;
+                transform: translateY(0);
+                }
+        }
+    }
+
+/* navbar */
+  
+/* tablet */
+
+@media screen and (width < 1060px) {
+    .header_nav{
+        grid-template-columns: .7fr 1.3fr;
+        justify-content: space-between;
+        figure{
+            grid-column: 1 / 2;
+            padding-left: 20px;
+        }
+        ul{
+            grid-column: 2 / -1;
+            padding-right: 20px;
+        }
+    }
+}
+
+/* tablet */
+
+/* mobile */
+
+@media screen and (width < 868px) {
+    .header_nav{
+        grid-template-columns: 1fr 1fr;
+        padding-block: 20px;
+        ul{
+            display: none;
+        }
+
+    }
+
+    .mobile_menu li:last-of-type{
+        padding-top: 30px;
+    }
+    .mobile{
+        display: flex;
+        justify-content: end;
+    }
+
+}
+
+/* mobile */
+
