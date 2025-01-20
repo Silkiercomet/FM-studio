@@ -202,6 +202,73 @@
 }
 
 /* hero */
+
+/* details */
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 100px 1fr;
+}
+
+.details_top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.details_top_content{
+    display: grid;
+    gap: 2rem;
+    padding-top: 130px;
+    padding-bottom: 250px;
+    padding-inline: 130px;
+
+    background-color: var(--secondary);
+    color: white;
+
+    h2{
+        font-size: 4rem;
+        line-height: 4.5rem;
+
+        span{
+            color: var(--primary);
+        }
+        
+    }
+    p{
+        font-size: 1.125rem;
+        line-height: 2rem;
+    }
+
+    .call{
+        text-decoration: none;
+        color: var(--primary);
+        font-weight: 800;
+        font-size: 1.2rem;
+        &::after{
+            content: "";
+            display: block;
+            max-width: 10.5ch;
+            height: 3px;
+            background-color: var(--primary);
+            transition: 300ms ease-in-out;
+            margin-top: 5px;
+        }
+    }
+}
+.details_top_bg{
+    background-image: url("./assets/desktop/image-strategic.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    img{
+        position: absolute;
+        top: 20%;
+        right: -60px;
+    }
+}
+/* details */
   
 /* tablet */
 
@@ -245,6 +312,12 @@
         .hero_bg{
             background-image: url("./assets/tablet/image-hero.jpg");
         }
+    }
+
+    /* details */
+    .details_top_bg{
+        background-image: url("./assets/tablet/image-strategic.jpg");
+
     }
     
 }
@@ -305,6 +378,34 @@
         }
     }
 
+    /* details */
+
+    .details_top{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .details_top_content{
+        padding-block: 100px;
+        padding-inline: 20px;
+        h2{
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+        p{
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+    .details_top_bg{
+        background-image: url("./assets/mobile/image-strategic.jpg");
+        img{
+            left:25px;
+            max-width: 70px;
+            top: auto;
+            bottom: -15px;
+
+        }
+    }
 }
 
 /* mobile */
