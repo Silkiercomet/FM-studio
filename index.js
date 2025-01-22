@@ -5,3 +5,5 @@ mobile_menu_btn.addEventListener('click', () => {
     mobile_menu.classList.toggle('active');
     console.log("check")
 });
+
+// swiper

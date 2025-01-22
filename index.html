@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Agency</title>
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
     <header class="header">
@@ -70,19 +71,47 @@
                 </div>
             </section>
         </div>
-        <section id="section4">
-            <div>
-                <h3>Brand identity & merchandise</h3>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><g transform="matrix(-1 0 0 1 40 0)" stroke="#F94F4F" fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="19.5"/><path stroke-width="2" d="M17.5 15l5 5-5 5"/></g></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><g stroke="#F94F4F" fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="19.5"/><path stroke-width="2" d="M17.5 15l5 5-5 5"/></g></svg>
+        <section id="section4" class="swiper">
+            <div class="slider">
+                <div class="slider__text">
+                    <h3 class="slide__headline enabled">
+                        Brand naming &<br />guidelines
+                      </h3>
+                      <h3 class="slide__headline">
+                        Brand identity &<br />
+                        merchandise
+                      </h3>
+                      <h3 class="slide__headline">
+                        Brand identity &<br />
+                        web design
+                      </h3>
+                    <div class="slider__buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="buttonBackward" width="40" height="40"><g transform="matrix(-1 0 0 1 40 0)" stroke="#F94F4F" fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="19.5"/><path stroke-width="2" d="M17.5 15l5 5-5 5"/></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="buttonForward" width="40" height="40"><g stroke="#F94F4F" fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="19.5"/><path stroke-width="2" d="M17.5 15l5 5-5 5"/></g></svg>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <div class="slides">
+                    <div class="slider__image slide0 active">
+                      <div class="slider__content">
+                        <h3>Lean Product Roadmap</h3>
+                        <p>2019 Project</p>
+                      </div>
+                    </div>
+        
+                    <div class="slider__image slide1">
+                      <div class="slider__content">
+                        <h3>New Majestic Hotel</h3>
+                        <p>2018 Project</p>
+                      </div>
+                    </div>
+        
+                    <div class="slider__image slide2">
+                      <div class="slider__content">
+                        <h3>Crypto Dashboard</h3>
+                        <p>2016 Project</p>
+                      </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -95,5 +124,6 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="slider.js"></script>
 </body>
 </html>
