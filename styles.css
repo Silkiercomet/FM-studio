@@ -140,7 +140,7 @@ h6 {
   transition: 300ms ease-in-out;
   font-weight: 800;
   text-align: center;
-  max-width: 155px;
+  max-width: 175px;
   opacity: 1;
 }
 .btn_secondary:hover {
@@ -375,6 +375,9 @@ h6 {
 .slider__buttons {
   display: flex;
   gap: 1.5rem;
+  svg{
+    cursor: pointer;
+  }
 }
 .slider .slides {
   overflow-x: hidden;
@@ -441,13 +444,15 @@ h6 {
   grid-template-rows: 1fr 1fr;
   gap: 2rem;
   padding-left: 3rem;
+
   justify-content: center;
   grid-column: 1 / 3;
   grid-row: 1;
   width: 100%;
   color: white;
   background-color: black;
-  padding-block: 4rem;
+  padding-block: 5rem;
+  padding-top: 8rem;
   z-index: 99;
   position: relative;
   h3 {
@@ -615,6 +620,43 @@ keyframes fade-in {
 
 /* swiper */
 
+
+/* footer --------------------------------------------------------------------------------- */
+footer{
+
+padding: 2rem 6rem;
+position: relative;
+}
+footer::before{
+  content: "";
+  height: 130px;
+  width: 130px;
+  background-image: url("./assets/desktop/bg-pattern-wave-red.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 30%;
+  left: -65px;
+
+}
+footer h4{
+  font-size: 3.5rem;
+  max-width: 600px;
+  font-weight: 800;
+  line-height: 4rem;
+}
+footer div{
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem auto;
+}
+
+
+/* footer ---------------------------------------------------------------------------------*/
+
 /* tablet */
 
 @media screen and (width < 1060px) {
@@ -716,6 +758,21 @@ keyframes fade-in {
     grid-column: 1;
   }
   /* swiper */
+
+  /* footer */
+  footer div{
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 3rem;
+  }
+  footer h4{
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  footer::before{
+    display: none;
+  }
 }
 
 /* tablet */
